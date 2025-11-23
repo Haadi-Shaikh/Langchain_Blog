@@ -1,7 +1,6 @@
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema import HumanMessage, SystemMessage
-# from secret_api_keys import hugging_face_api_key
+from langchain_core.prompts import ChatPromptTemplate 
+from langchain_core.messages import HumanMessage, SystemMessage 
 import os
 import streamlit as st
 import time
@@ -160,7 +159,7 @@ def generate_blog_content_langchain(title, keywords, blog_length, chat_model):
 # Streamlit UI
 st.set_page_config(page_title="AI Blog Generator", page_icon="✍️", layout="wide")
 
-st.title("✍️ AI Blog Content Assistant....")
+st.title("✍️ AI Blog Content Assistant")
 st.header("Create High-Quality Blog Content Without Breaking the Bank")
 
 if 'current_model' not in st.session_state:
